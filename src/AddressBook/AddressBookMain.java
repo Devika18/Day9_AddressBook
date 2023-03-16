@@ -1,13 +1,24 @@
 package AddressBook;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBookMain {
 
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book Program...!");
-
+        Contact contact = addContact();
+        System.out.println(contact);
+    }
+    private static Contact addContact() {
+        Contact contact = new Contact();
+        System.out.println("Enter first name:");
+        contact.setFirstName(scanner.next());
+        System.out.println("Enter last name:");
+        contact.setLastName(scanner.next());
+        System.out.println("Enter address:");
+        contact.setAddress(scanner.next());
+        return contact;
     }
 
 }
