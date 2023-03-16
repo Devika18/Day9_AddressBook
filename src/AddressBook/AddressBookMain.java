@@ -9,6 +9,8 @@ public class AddressBookMain {
         System.out.println("Welcome to Address Book Program...!");
         Contact contact = addContact();
         System.out.println(contact);
+        Contact editedContact = editContact(contact);
+        System.out.println(editedContact);
     }
     private static Contact addContact() {
         Contact contact = new Contact();
@@ -18,6 +20,12 @@ public class AddressBookMain {
         contact.setLastName(scanner.next());
         System.out.println("Enter address:");
         contact.setAddress(scanner.next());
+        return contact;
+    }
+
+    private static Contact editContact(Contact contact) {
+        System.out.println("Edit first name");
+        contact.setFirstName(scanner.next());
         return contact;
     }
 
