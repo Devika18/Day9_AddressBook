@@ -8,11 +8,19 @@ public class Contact {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
+        this.city=city;
+        this.state=state;
+        this.zip=zip;
+        this.phoneNumber=phoneNumber;
     }
 
     private String firstName;
     private String lastName;
     private String address;
+    private String city;
+    private String state;
+    private int zip;
+    private long phoneNumber;
 
     public String getFirstName() {
         return firstName;
@@ -37,13 +45,33 @@ public class Contact {
     public void setAddress(String address) {
         this.address = address;
     }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city= city;
+    }
+    public String getState() {
+        return state;
+    }
+    public void setState(String state) {
+        this.state= state;
+    }
+    public int getZip() {
+        return zip;
+    }
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     @Override
-    public String toString() {
-        return "Contact{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+    public String toString(){
+        return  "\nFirstName : "+this.firstName +" LastName : "+this.lastName +" City : "+this.city +" State : "+this.state +" Zip : "+this.zip +" PhoneNumber : "+this.phoneNumber;
     }
 }
